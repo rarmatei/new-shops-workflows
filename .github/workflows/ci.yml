@@ -23,5 +23,4 @@ jobs:
         run: pnpm install
       - run: git branch --track main origin/main
       - run: npx nx affected -t lint --parallel=1
-      - run: npx nx-cloud stop-all-agents
 
