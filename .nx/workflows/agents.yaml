@@ -3,7 +3,6 @@ launch-templates:
     resourceClass: "docker_linux_amd64/medium+"
     image: 'ubuntu22.04-node20.11-v9'
     env:
-      NX_CLOUD_ACCESS_TOKEN: '{{secrets.NX_CLOUD_ACCESS_TOKEN}}'
       SELECTED_PM: 'pnpm'
       NPM_CONFIG_PREFIX: '/home/workflows/.npm-global'
     init-steps:
@@ -17,7 +16,7 @@ launch-templates:
             node_modules
             ~/.cache/Cypress
             ~/.pnpm-store
-          BASE_BRANCH: 'master'
+          BASE_BRANCH: 'main'
       - name: Install Pnpm
         script: |
           npm install -g @pnpm/exe@8.7.4
